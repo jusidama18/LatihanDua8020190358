@@ -48,6 +48,8 @@
                     <tr>
                         <th scope="col" style="text-align: center">Judul</th>
                         <th scope="col" style="text-align: center">Nama Pengarang</th>
+                        <th scope="col" style="text-align: center">Tanggal Dibuat</th>
+                        <th scope="col" style="text-align: center">Terakhir Diubah</th>
                         <th scope="col" style="text-align: center">Aksi</th>
                     </tr>
                   </thead>
@@ -59,6 +61,12 @@
                         </td>
                         <td>
                             {{ $data -> pengarang }}
+                        </td>
+                        <td>
+                            {{ $data -> created_at }}
+                        </td>
+                        <td>
+                            {{ $data -> updated_at }}
                         </td>
                         <td style="text-align: center">
                             <a href="/buku/{{$data->id}}/edit" class="btn btn-success">Ubah</a>
