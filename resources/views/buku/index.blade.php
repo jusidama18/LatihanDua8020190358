@@ -45,25 +45,29 @@
                         </div>
                       </div>
                 </div>
+
                 <table class="table table-hover table-bordered" style="width:80%;margin:auto;">
                   <thead class="thead-dark">
                     <tr>
-                      <th scope="col">Judul</th>
-                      <th scope="col">Nama Pengarang</th>
-                      <th scope="col">Aksi</th>
-
+                        <th scope="col" style="text-align: center">No</th>                        
+                        <th scope="col" style="text-align: center">Judul</th>
+                        <th scope="col" style="text-align: center">Nama Pengarang</th>
+                        <th scope="col" style="text-align: center">Aksi</th>
                     </tr>
                   </thead>
                   <tbody>
                     @foreach($data_buku as $data)
                     <tr>
-                        <td>
-                            {{ $data->judul }}
+                        <td style="text-align: center">
+                            {{ $data -> id }}
                         </td>
                         <td>
-                            {{ $data->pengarang }}
+                            {{ $data -> judul }}
                         </td>
                         <td>
+                            {{ $data -> pengarang }}
+                        </td>
+                        <td style="text-align: center">
                             <a href="/buku/{{$data->id}}/edit" class="btn btn-secondary">Edit</a>
                             <a href="/buku/{{$data->id}}/delete" class="btn btn-danger">Delete</a>
                         </td>
@@ -75,6 +79,7 @@
             </div>
 
         </div>
+        <br>
         <button type="button" class="btn btn-primary" style="display: block;margin:auto" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Tambahkan Buku
           </button>
