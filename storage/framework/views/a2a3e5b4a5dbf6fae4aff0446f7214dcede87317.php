@@ -47,7 +47,6 @@
                 <table class="table table-hover table-bordered" style="width:80%;margin:auto;">
                   <thead class="thead-dark">
                     <tr>
-                        <th scope="col" style="text-align: center">No</th>                        
                         <th scope="col" style="text-align: center">Judul</th>
                         <th scope="col" style="text-align: center">Nama Pengarang</th>
                         <th scope="col" style="text-align: center">Aksi</th>
@@ -56,10 +55,6 @@
                   <tbody>
                     <?php $__currentLoopData = $data_buku; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <tr>
-                        <td style="text-align: center">
-                            <?php echo e($data -> id); ?>
-
-                        </td>
                         <td>
                             <?php echo e($data -> judul); ?>
 
