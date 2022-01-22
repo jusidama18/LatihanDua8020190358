@@ -11,9 +11,12 @@
 |
 */
 
-Route::get('/','BukuController@index')->name('index');
-Route::get('/create','BukuController@create')->name('create');
-Route::get('/edit/{id}','BukuController@edit')->name('edit');
-Route::put('/update/{id}','BukuController@update')->name('update');
-Route::post('/store','BukuController@store')->name('store');
-Route::delete('/destroy/{id}','BukuController@destroy')->name('destroy');
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/buku','BukuController@index');
+Route::post('/buku/create','BukuController@create');
+Route::get('/buku/{id}/edit','BukuController@edit');
+Route::post('/buku/{id}/update','BukuController@update');
+Route::get('/buku/{id}/delete','BukuController@delete');
