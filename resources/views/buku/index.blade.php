@@ -13,29 +13,26 @@
                 </div>
                 <br>
                 <div class="col-6">
-
-                      <!-- Modal -->
-                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Pengisian Data Buku</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <h5 class="modal-title" id="exampleModalLabel">Pengisian Data Buku</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <form action="/buku/create"method=POST>
                                     {{ csrf_field() }}
                                     <div class="mb-3">
-                                      <label for="exampleInputEmail1" class="form-label">Judul Buku</label>
-                                      <input name="judul" type="text" class="form-control" id="judul" aria-describedby="emailHelp" placeholder="Masukkan Judul Buku...">
+                                        <label for="exampleInputEmail1" class="form-label">Judul Buku</label>
+                                        <input name="judul" type="text" class="form-control" id="judul" aria-describedby="emailHelp" placeholder="Masukkan Judul Buku...">
                                     </div>
                                     <div class="mb-3">
-                                      <label for="exampleInputPassword1" class="form-label">Nama Pengarang</label>
-                                      <input name= "pengarang" type="text" class="form-control" id="pengarang" placeholder="Masukkan Nama Pengarang...">
+                                        <label for="exampleInputPassword1" class="form-label">Nama Pengarang</label>
+                                        <input name= "pengarang" type="text" class="form-control" id="pengarang" placeholder="Masukkan Nama Pengarang...">
                                     </div>
-                                    <div class="mb-3 form-check">
-
-                                    </div>
+                                    <div class="mb-3 form-check"></div>
                                     <button type="submit" class="btn btn-primary">Tambahkan</button>
                                   </form>
                             </div>
