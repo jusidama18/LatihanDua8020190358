@@ -1,21 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Buku Juan</title>
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-</head>
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h1 style="text-align: center;">List Buku</h1>
-            </div>
-            <div class="col-6">
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 style="text-align: center;">List Buku</h1>
+                </div>
+                <div class="col-6">
 
                       <!-- Modal -->
                       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -50,34 +46,43 @@
                         </div>
                       </div>
                 </div>
-            <table class="table table-hover table-bordered" style="width:80%;margin:auto;">
-                <thead class="thead-dark">
-                <tr class="table-success">
-                    <th scope="col">No.</th>
-                    <th scope="col">Judul Buku</th>
-                    <th scope="col">Nama Pengarang</th>
-                </tr>
-                </thead>
-                <tbody>
-                <?php $__currentLoopData = $data_buku; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <tr>
-                    <td>
-                        <?php echo e($data -> id); ?>
+                <table class="table table-hover table-bordered" style="width:80%;margin:auto;">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th scope="col">Judul</th>
+                      <th scope="col">Nama Pengarang</th>
+                      <th scope="col">Aksi</th>
 
-                    </td>
-                    <td>
-                        <?php echo e($data -> judul); ?>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php $__currentLoopData = $data_buku; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <tr>
+                        <td>
+                            <?php echo e($data->judul); ?>
 
-                    </td>
-                    <td>
-                        <?php echo e($data -> pengarang); ?>
+                        </td>
+                        <td>
+                            <?php echo e($data->pengarang); ?>
 
-                    </td>
-                </tr>
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                </tbody>
-            </table>
+                        </td>
+                        <td>
+                            <a href="/buku/<?php echo e($data->id); ?>/edit" class="btn btn-secondary">Edit</a>
+                            <a href="/buku/<?php echo e($data->id); ?>/delete" class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                  </tbody>
+                </table>
+
+            </div>
+
         </div>
-    </div>
-</body>
+        <button type="button" class="btn btn-primary" style="display: block;margin:auto" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Tambahkan Buku
+          </button>
+
+        <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </body>
 </html><?php /**PATH C:\Users\MSI GF65\Documents\Repo Github\LatihanDua8020190358\resources\views/buku/index.blade.php ENDPATH**/ ?>
