@@ -19,7 +19,6 @@
                           <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">Pengisian Data Buku</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <form action="/buku/create"method=POST>
@@ -47,7 +46,6 @@
                 <table class="table table-hover table-bordered" style="width:80%;margin:auto;">
                   <thead class="thead-dark">
                     <tr>
-                        <th scope="col" style="text-align: center">No</th>                        
                         <th scope="col" style="text-align: center">Judul</th>
                         <th scope="col" style="text-align: center">Nama Pengarang</th>
                         <th scope="col" style="text-align: center">Aksi</th>
@@ -56,9 +54,6 @@
                   <tbody>
                     @foreach($data_buku as $data)
                     <tr>
-                        <td style="text-align: center">
-                            {{ $data -> id }}
-                        </td>
                         <td>
                             {{ $data -> judul }}
                         </td>
