@@ -18,7 +18,7 @@
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                              <h5 class="modal-title" id="exampleModalLabel">Pengisian Data Buku</h5>
                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
@@ -27,20 +27,20 @@
 
                                     <div class="mb-3">
                                       <label for="exampleInputEmail1" class="form-label">Judul Buku</label>
-                                      <input name="judul" type="text" class="form-control" id="judul" aria-describedby="emailHelp">
+                                      <input name="judul" type="text" class="form-control" id="judul" aria-describedby="emailHelp" placeholder="Masukkan Judul Buku...">
                                     </div>
                                     <div class="mb-3">
                                       <label for="exampleInputPassword1" class="form-label">Nama Pengarang</label>
-                                      <input name= "pengarang" type="text" class="form-control" id="pengarang">
+                                      <input name= "pengarang" type="text" class="form-control" id="pengarang" placeholder="Masukkan Nama Pengarang...">
                                     </div>
                                     <div class="mb-3 form-check">
 
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-primary">Tambahkan</button>
                                   </form>
                             </div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
                             </div>
                           </div>
                         </div>
